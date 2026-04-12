@@ -5,6 +5,7 @@ server/node_modules/
 
 # Environment variables - NEVER commit these
 .env
+.env.example
 server/.env
 client/.env
 
