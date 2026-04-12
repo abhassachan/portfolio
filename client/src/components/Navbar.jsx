@@ -35,7 +35,7 @@ export default function Navbar({ theme, toggleTheme }) {
   };
 
   return (
-    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${menuOpen ? 'navbar--menu-open' : ''}`}>
       <div className="container navbar__inner">
         <a href="#hero" className="navbar__logo" onClick={(e) => handleNavClick(e, '#hero')}>
           <span className="logo-bracket">&lt;</span>

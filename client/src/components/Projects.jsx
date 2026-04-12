@@ -21,8 +21,8 @@ const projects = [
     description:
       'Deep learning system achieving ~98% classification accuracy on real-time webcam data. Built with MediaPipe pose estimation, optimized for low-latency edge deployment on Raspberry Pi.',
     tech: ['Python', 'TensorFlow', 'MediaPipe', 'OpenCV', 'Raspberry Pi'],
-    github: 'https://github.com/abhassachan',
-    live: 'https://github.com/abhassachan',
+    github: 'https://github.com/abhassachan/Real-Time-Exercise-Recognition-Deep-Learning',
+    live: 'https://github.com/abhassachan/Real-Time-Exercise-Recognition-Deep-Learning',
     category: 'aiml',
     featured: true,
   },
