@@ -279,7 +279,7 @@
 @media (max-width: 900px) {
   .hero__inner {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 32px;
     text-align: center;
   }
 
@@ -303,17 +303,65 @@
   }
 
   .hero__avatar-ring {
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
   }
 
   .hero__avatar {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .hero__stats {
+    gap: 10px;
+  }
+
+  .hero__stat {
+    padding: 10px 14px;
+    min-width: 70px;
   }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: 100px 0 60px;
+    overflow-x: hidden;
+  }
+
   .hero__name {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    word-break: break-word;
+  }
+
+  .hero__bio {
+    font-size: 0.9rem;
+  }
+
+  .hero__avatar-ring {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero__avatar {
+    font-size: 1.8rem;
+  }
+
+  .hero__stats {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .hero__stat {
+    padding: 8px 12px;
+    min-width: 60px;
+  }
+
+  .hero__stat strong {
+    font-size: 1rem;
+  }
+
+  .hero__orb--1,
+  .hero__orb--2 {
+    display: none;
   }
 }
