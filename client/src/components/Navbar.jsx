@@ -19,13 +19,11 @@ export default function Navbar({ theme, toggleTheme }) {
 useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 30);
-      if (menuOpen) {
-        setMenuOpen(false);
-      }
+      setMenuOpen(false);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [menuOpen]);
+  }, []);
 
   const handleNavClick = (e, href) => {
     e.preventDefault();
