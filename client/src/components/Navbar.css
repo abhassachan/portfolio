@@ -1,16 +1,3 @@
-.navbar__links--open {
-  transform: translateX(0);
-  overflow: hidden;
-}
-
-body:has(.navbar__links--open) section,
-body:has(.navbar__links--open) footer {
-  z-index: 0 !important;
-  position: relative;
-}
-
-
-
 .navbar {
   position: fixed;
   top: 0;
@@ -128,23 +115,22 @@ body:has(.navbar__links--open) footer {
     display: flex;
   }
 
-.navbar__links {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 28px;
-  background: var(--bg-secondary);
-  transform: translateX(100%);
-  transition: transform var(--transition);
-  z-index: 9999;
-  overflow: hidden;
-  isolation: isolate;
-}
+  .navbar__links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    background: var(--bg-secondary);
+    transform: translateX(100%);
+    transition: transform var(--transition);
+    z-index: 998;
+    overflow: hidden;
+  }
 
   .navbar__links--open {
     transform: translateX(0);

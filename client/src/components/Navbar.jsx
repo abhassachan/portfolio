@@ -16,13 +16,16 @@ export default function Navbar({ theme, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState('');
 
-  useEffect(() => {
+useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 30);
+      if (menuOpen) {
+        setMenuOpen(false);
+      }
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [menuOpen]);
 
   const handleNavClick = (e, href) => {
     e.preventDefault();
