@@ -14,28 +14,11 @@ const navLinks = [
 export default function Navbar({ theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  useEffect(() => {
-  if (menuOpen) {
-    document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.width = '100%';
-  } else {
-    document.body.style.overflow = '';
-    document.body.style.position = '';
-    document.body.style.width = '';
-  }
-  return () => {
-    document.body.style.overflow = '';
-    document.body.style.position = '';
-    document.body.style.width = '';
-  };
-}, [menuOpen]);
   const [active, setActive] = useState('');
 
-useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 30);
-      setMenuOpen(false);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
