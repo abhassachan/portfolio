@@ -72,13 +72,14 @@ export default function Navbar({ theme, toggleTheme }) {
           >
             {theme === 'light' ? <FiMoon size={18} /> : <FiSun size={18} />}
           </button>
-          <button
-            className="menu-toggle"
-            onClick={() => setMenuOpen((prev) => !prev)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <FiX size={22} /> : <FiMenu size={22} />}
-          </button>
+      <button
+  className="menu-toggle"
+  onClick={() => setMenuOpen((prev) => !prev)}
+  aria-label="Toggle menu"
+  style={{ zIndex: 1001, position: 'relative' }}
+>
+  {menuOpen ? <FiX size={22} /> : <FiMenu size={22} />}
+</button>
         </div>
       </div>
     </header>
