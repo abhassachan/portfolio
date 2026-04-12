@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiGithub, FiLinkedin, FiTwitter, FiHeart } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiHeart } from 'react-icons/fi';
 import './Footer.css';
 
 const navLinks = ['About', 'Skills', 'Projects', 'Timeline', 'Certifications', 'Contact'];

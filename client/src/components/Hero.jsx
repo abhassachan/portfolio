@@ -1,7 +1,7 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
-import { FiDownload, FiArrowDown, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { FiDownload, FiArrowDown, FiGithub, FiLinkedin } from 'react-icons/fi';
 import './Hero.css';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
