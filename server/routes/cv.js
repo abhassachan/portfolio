@@ -50,4 +50,26 @@ router.get('/docx', (req, res) => {
   });
 });
 
+
+const CERTS_DIR = path.join(__dirname, '../assets/certificates');
+
+// GET /api/certificates/:name - Serve certificate files
+router.get('/certificates/:name', (req, res) => {
+  const allowed = ['coursera.pdf', 'lusip.pdf', 'redhat.pdf'];
+  const fileName = req.params.name;
+
+  if (!allowed.includes(fileName)) {
+    return res.status(404).json({ message: 'Certificate not found.' });
+  }
+
+  const filePath = path.join(CERTS_DIR, fileName);
+
+  if (!fs.existsSync(filePath)) {
+    return res.status(404).json({ message: 'File not found on server.' });
+  }
+
+  res.setHeader('Content-Type', 'application/pdf');
+  res.sendFile(filePath);
+});
+
 module.exports = router;

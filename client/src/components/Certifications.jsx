@@ -1,61 +1,39 @@
-import React from 'react';
-import { FiAward, FiExternalLink } from 'react-icons/fi';
+import React, { useState } from 'react';
+import { FiX } from 'react-icons/fi';
 import './Certifications.css';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 
 const certs = [
   {
-    title: 'CodeChef 3★ Rated Programmer',
-    platform: 'CodeChef',
-    issuer: 'Peak Rating: 1609',
-    year: '2024',
-    color: '#e67e22',
-    link: 'https://codechef.com',
-    isAward: true,
-  },
-  {
-    title: 'Kaggle Multi-Class Hate Speech Detection',
-    platform: 'Kaggle',
-    issuer: 'Competition Participant',
-    year: '2024',
-    color: '#20beff',
-    link: 'https://kaggle.com',
-    isAward: true,
-  },
-  {
-    title: 'AI/ML Internship — LUSIP Program',
+    title: 'LUSIP 2025 — Yoga Pose Recognition using Deep Learning',
     platform: 'LNMIIT Jaipur',
-    issuer: 'Real-Time Pose Estimation Research',
+    issuer: 'Dr. Sandeep Saini · Dr. Harshvardhan Kumar',
     year: '2025',
-    color: '#27ae60',
-    link: 'https://lnmiit.ac.in',
+    color: '#e63946',
+    file: 'lusip.pdf',
   },
   {
-    title: 'Blockchain & Smart Contract Development',
-    platform: 'Self-Directed',
-    issuer: 'Ethereum · Solidity · MetaMask',
-    year: '2026',
-    color: '#8e44ad',
-    link: 'https://ethereum.org',
+    title: 'Red Hat System Administration I (RH124 - RHA) Ver. 9.3',
+    platform: 'Red Hat',
+    issuer: 'Red Hat Academy',
+    year: '2025',
+    color: '#cc0000',
+    file: 'redhat.pdf',
   },
   {
-    title: 'Deep Learning Specialization',
+    title: 'Programming for Everybody (Getting Started with Python)',
     platform: 'Coursera',
-    issuer: 'Andrew Ng / DeepLearning.AI',
-    year: '2024',
-    color: '#2980b9',
-    link: 'https://coursera.org',
-  },
-  {
-    title: 'Data Structures & Algorithms',
-    platform: 'Coursera',
-    issuer: 'UC San Diego',
+    issuer: 'University of Michigan',
     year: '2023',
-    color: '#c0392b',
-    link: 'https://coursera.org',
+    color: '#2980b9',
+    file: 'coursera.pdf',
   },
 ];
 
 export default function Certifications() {
+  const [selected, setSelected] = useState(null);
+
   return (
     <section id="certifications" className="section certifications">
       <div className="container">
@@ -63,45 +41,59 @@ export default function Certifications() {
           <span className="section-label">Credentials</span>
           <h2 className="section-title">Certifications & Achievements</h2>
           <p className="section-subtitle">
-            Continuous learning through online platforms, university programs, and hackathon participation.
+            Click any certificate to view it.
           </p>
         </div>
 
         <div className="certs__grid">
           {certs.map((cert, i) => (
-            <a
+            <div
               key={i}
-              href={cert.link}
-              target="_blank"
-              rel="noreferrer"
               className="cert-card"
               data-aos="fade-up"
-              data-aos-delay={i * 70}
+              data-aos-delay={i * 100}
+              onClick={() => setSelected(cert)}
+              style={{ cursor: 'pointer' }}
             >
-              <div
-                className="cert-card__icon"
-                style={{ '--cert-color': cert.color }}
-              >
-                <FiAward size={22} />
+              <div className="cert-card__icon" style={{ '--cert-color': cert.color }}>
+                <span style={{ fontSize: '1.4rem' }}>🏆</span>
               </div>
               <div className="cert-card__body">
                 <div className="cert-card__top">
                   <span className="cert-card__platform" style={{ color: cert.color }}>
                     {cert.platform}
-                    {cert.isAward && ' 🏆'}
                   </span>
                   <span className="cert-card__year">{cert.year}</span>
                 </div>
                 <h3 className="cert-card__title">{cert.title}</h3>
                 <p className="cert-card__issuer">{cert.issuer}</p>
               </div>
-              <div className="cert-card__arrow">
-                <FiExternalLink size={16} />
+              <div className="cert-card__arrow" style={{ color: cert.color }}>
+                View →
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
+
+      {/* Modal */}
+      {selected && (
+        <div className="cert-modal" onClick={() => setSelected(null)}>
+          <div className="cert-modal__box" onClick={(e) => e.stopPropagation()}>
+            <div className="cert-modal__header">
+              <h3>{selected.title}</h3>
+              <button className="cert-modal__close" onClick={() => setSelected(null)}>
+                <FiX size={22} />
+              </button>
+            </div>
+            <iframe
+              src={`${BACKEND_URL}/api/cv/certificates/${selected.file}`}
+              title={selected.title}
+              className="cert-modal__frame"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
-}
+};
