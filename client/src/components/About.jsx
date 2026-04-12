@@ -1,6 +1,7 @@
 import React from 'react';
 import { FiMapPin, FiBook, FiCode, FiCoffee } from 'react-icons/fi';
 import './About.css';
+import profilePic from '../assets/abhas.jpg';
 
 const highlights = [
   { icon: <FiBook />, label: 'University', value: 'JK Lakshmipat University' },
@@ -17,8 +18,8 @@ export default function About() {
           <div className="about__left" data-aos="fade-right">
             <div className="about__image-wrap">
               <div className="about__image-placeholder">
-                <span>AS</span>
-              </div>
+  <img src={profilePic} alt="Abhas Sachan" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+</div>
               <div className="about__image-deco" aria-hidden="true" />
             </div>
           </div>
@@ -43,8 +44,7 @@ export default function About() {
             <p className="about__para">
               On the blockchain side, I've built a <strong>peer-to-peer solar energy trading
               platform</strong> using Solidity and Ethereum. I'm also a <strong>CodeChef 3★
-              rated programmer</strong> (peak 1609) and have competed in Kaggle's Multi-Class
-              Hate Speech Detection competition.
+              rated programmer</strong> (peak 1609).
             </p>
 
             <div className="about__highlights">

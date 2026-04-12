@@ -107,7 +107,7 @@
 
 .hero__actions {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
   flex-wrap: wrap;
   margin-bottom: 40px;

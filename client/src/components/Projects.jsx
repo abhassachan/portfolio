@@ -33,21 +33,11 @@ const projects = [
       'Progressive Web App for real-time GPS run tracking with map-based territory gamification. Enhances user engagement and running consistency through competitive territory-capture mechanics.',
     tech: ['React', 'Node.js', 'MongoDB', 'GPS API', 'PWA'],
     github: 'https://github.com/abhassachan',
-    live: 'https://github.com/abhassachan',
+    live: 'https://minor-project-gamma-two.vercel.app/',
     category: 'fullstack',
     featured: true,
   },
-  {
-    id: 4,
-    title: 'Personal Portfolio Website',
-    description:
-      'This portfolio — a full-stack MERN application with animated sections, dark/light mode, contact form saved to MongoDB, and CV download (PDF + DOCX) served via Express.',
-    tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Framer Motion'],
-    github: 'https://github.com/abhassachan',
-    live: 'https://your-portfolio.vercel.app',
-    category: 'fullstack',
-    featured: false,
-  },
+ 
 ];
 
 const filters = [

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiGithub, FiLinkedin, FiHeart } from 'react-icons/fi';
+import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import './Footer.css';
 
 const navLinks = ['About', 'Skills', 'Projects', 'Timeline', 'Certifications', 'Contact'];
@@ -43,14 +43,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="footer__bottom">
-        <div className="container footer__bottom-inner">
-          <p>© {new Date().getFullYear()} Abhas Sachan. All rights reserved.</p>
-          <p className="footer__made-with">
-            Made with <FiHeart size={13} className="footer__heart" /> using MERN Stack
-          </p>
-        </div>
-      </div>
+     
     </footer>
   );
 }
