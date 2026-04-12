@@ -156,8 +156,8 @@ export default function Hero() {
               <span>+ MERN</span>
             </div>
             <div className="hero__stat">
-              <strong>~98%</strong>
-              <span>CV Accuracy</span>
+              <strong>MERN</strong>
+              <span>Full Stack Developer</span>
             </div>
           </div>
         </motion.div>

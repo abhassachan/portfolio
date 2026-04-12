@@ -10,7 +10,7 @@ const projects = [
     description:
       'Decentralized peer-to-peer solar energy trading system using Solidity and Ethereum. Tokenizes surplus solar power (1 kWh per token) and enables secure transactions via MetaMask smart contracts.',
     tech: ['Solidity', 'Ethereum', 'MetaMask', 'Smart Contracts', 'JavaScript'],
-    github: 'https://github.com/abhassachan',
+    github: 'https://github.com/abhassachan/solar-energy-trading',
     live: 'https://github.com/abhassachan',
     category: 'blockchain',
     featured: true,

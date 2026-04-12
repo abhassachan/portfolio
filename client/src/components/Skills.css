@@ -23,6 +23,8 @@
   background: var(--bg-card);
   transition: var(--transition);
   cursor: pointer;
+  white-space: nowrap;
+  min-width: fit-content;
 }
 
 .skills__tab:hover {
@@ -33,8 +35,14 @@
 .skills__tab--active {
   background: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: #ffffff !important;
   box-shadow: var(--shadow-accent);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.skills__tab--active:hover {
+  color: #ffffff !important;
 }
 
 .skills__grid {
