@@ -17,7 +17,7 @@ export default function Footer() {
             <span className="logo-bracket">&lt;</span>AS<span className="logo-bracket">/&gt;</span>
           </a>
           <p className="footer__tagline">
-            Building at the intersection of AI/ML, full-stack web, and blockchain — from Jaipur, Rajasthan.
+            Python & GenAI Developer | Full-Stack Developer | AI/ML Engineer — based in Jaipur, Rajasthan.
           </p>
           <div className="footer__socials">
             <a href="https://github.com/abhassachan" target="_blank" rel="noreferrer" aria-label="GitHub" className="footer__social">

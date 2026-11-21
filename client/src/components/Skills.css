@@ -47,36 +47,44 @@
 
 .skills__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
 }
 
 .skill-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 20px 22px;
+  padding: 16px 18px;
   position: relative;
   transition: var(--transition);
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .skill-card:hover {
   border-color: var(--accent);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+  background: var(--bg-hover);
 }
 
-.skill-card:hover .skill-card__tooltip {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.skill-card__top {
+.skill-card__inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  gap: 12px;
+  min-width: 0;
+}
+
+.skill-card__bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow);
+  flex-shrink: 0;
 }
 
 .skill-card__name {
@@ -86,40 +94,16 @@
   font-family: var(--font-display);
 }
 
-.skill-card__level {
+.skill-card__tag {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--accent);
-  font-weight: 500;
-}
-
-.skill-bar {
-  height: 6px;
-  background: var(--bg-hover);
-  border-radius: 100px;
-  overflow: hidden;
-}
-
-.skill-bar__fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-dark) 100%);
-  border-radius: 100px;
-}
-
-.skill-card__tooltip {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  font-size: 0.7rem;
-  font-family: var(--font-mono);
+  font-size: 0.72rem;
   color: var(--accent);
   background: var(--accent-light);
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: 100px;
-  opacity: 0;
-  transform: translateY(-4px);
-  transition: var(--transition);
-  pointer-events: none;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 600px) {

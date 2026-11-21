@@ -6,45 +6,55 @@ import './Projects.css';
 const projects = [
   {
     id: 1,
-    title: 'Blockchain Solar Energy Trading Platform',
+    title: 'Ravel — Reachability-Aware Security Triage & Codebase Knowledge Graph',
     description:
-      'Decentralized peer-to-peer solar energy trading system using Solidity and Ethereum. Tokenizes surplus solar power (1 kWh per token) and enables secure transactions via MetaMask smart contracts.',
-    tech: ['Solidity', 'Ethereum', 'MetaMask', 'Smart Contracts', 'JavaScript'],
-    github: 'https://github.com/abhassachan/solar-energy-trading',
-    live: 'https://github.com/abhassachan',
-    category: 'blockchain',
+      'Built token-budgeted local LLM triage (Ollama, Pydantic structured outputs, Typer CLI) on top of static scanners (Bandit, Semgrep, OSV) with SHA-256 caching and 124+ Pytest tests. Architected multi-relational Python codebase knowledge graph using Tree-Sitter CST parsing and Jedi call resolution (98.3% PyCG precision, 89.7% recall). Engineered deterministic NetworkX graph reachability to trace HTTP routes (FastAPI, Flask, Django) to vulnerability sinks.',
+    tech: ['Python', 'GenAI / LLMs (Ollama)', 'Pydantic', 'Tree-Sitter', 'NetworkX', 'Jedi', 'FastAPI', 'Bandit & Semgrep', 'Pytest'],
+    github: 'https://github.com/shreychechani/Ravel',
+    live: 'https://github.com/shreychechani/Ravel',
+    category: 'genai',
     featured: true,
   },
   {
     id: 2,
-    title: 'Real-Time Exercise Recognition System',
+    title: 'CONQUR — GPS-Enabled Gamified Running Web App (PWA)',
     description:
-      'Deep learning system achieving ~98% classification accuracy on real-time webcam data. Built with MediaPipe pose estimation, optimized for low-latency edge deployment on Raspberry Pi.',
-    tech: ['Python', 'TensorFlow', 'MediaPipe', 'OpenCV', 'Raspberry Pi'],
-    github: 'https://github.com/abhassachan/Real-Time-Exercise-Recognition-Deep-Learning',
-    live: 'https://github.com/abhassachan/Real-Time-Exercise-Recognition-Deep-Learning',
-    category: 'aiml',
-    featured: true,
-  },
-  {
-    id: 3,
-    title: 'GPS Gamified Running Web App (PWA)',
-    description:
-      'Progressive Web App for real-time GPS run tracking with map-based territory gamification. Enhances user engagement and running consistency through competitive territory-capture mechanics.',
-    tech: ['React', 'Node.js', 'MongoDB', 'GPS API', 'PWA'],
-    github: 'https://github.com/abhassachan',
+      'Developed Node.js/Express and MongoDB REST backend with JWT/bcrypt auth, clan wars via invite links, leaderboards, run history, and node-cron scheduled XP challenges. Built mobile-first, installable PWA (React, Vite, Tailwind CSS) tracking runs in real time through Geolocation API and Leaflet maps for claiming territory.',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Leaflet', 'Node.js', 'Express.js', 'MongoDB', 'JWT Auth', 'PWA'],
+    github: 'https://github.com/abhassachan/Minor_Project',
     live: 'https://minor-project-gamma-two.vercel.app/',
     category: 'fullstack',
     featured: true,
   },
- 
+  {
+    id: 3,
+    title: 'Blockchain-Based Peer-to-Peer Solar Energy Trading Platform',
+    description:
+      'Built decentralized energy trading system using Solidity and Ethereum to tokenize surplus solar power (1 kWh per token) and enable secure peer-to-peer transactions via MetaMask. Deployed and validated end-to-end on local Hardhat testnet, orchestrating 4 interconnected contracts across fixed-price, auction, and automated NFT minting flows.',
+    tech: ['Solidity', 'Ethereum', 'Hardhat', 'Smart Contracts', 'MetaMask', 'JavaScript', 'NFTs'],
+    github: 'https://github.com/abhassachan/solar-energy-trading',
+    live: 'https://github.com/abhassachan/solar-energy-trading',
+    category: 'blockchain',
+    featured: true,
+  },
+  {
+    id: 4,
+    title: 'Real-Time Exercise Recognition System',
+    description:
+      'Developed real-time exercise recognition system using deep learning and MediaPipe pose estimation achieving ~98% classification accuracy on real-time webcam data. Designed end-to-end pose estimation pipeline using MediaPipe and optimized the model for low-latency edge deployment on Raspberry Pi.',
+    tech: ['Python', 'MediaPipe', 'OpenCV', 'TensorFlow', 'Raspberry Pi', 'Keras'],
+    github: 'https://github.com/abhassachan/Real-Time-Exercise-Recognition-Deep-Learning',
+    live: 'https://github.com/abhassachan/Real-Time-Exercise-Recognition-Deep-Learning',
+    category: 'genai',
+    featured: false,
+  },
 ];
 
 const filters = [
   { id: 'all', label: 'All Projects' },
-  { id: 'aiml', label: 'AI / ML' },
+  { id: 'genai', label: 'GenAI & AI / ML' },
+  { id: 'fullstack', label: 'Full Stack & APIs' },
   { id: 'blockchain', label: 'Blockchain' },
-  { id: 'fullstack', label: 'Full Stack' },
 ];
 
 export default function Projects() {
@@ -60,8 +70,8 @@ export default function Projects() {
           <span className="section-label">Work</span>
           <h2 className="section-title">Projects Showcase</h2>
           <p className="section-subtitle">
-            A selection of projects demonstrating my skills across the MERN stack — from REST APIs to
-            full-stack applications.
+            A selection of projects demonstrating hands-on experience in GenAI triage pipelines, AST knowledge graphs,
+            live REST backends, and full-stack web applications.
           </p>
         </div>
 

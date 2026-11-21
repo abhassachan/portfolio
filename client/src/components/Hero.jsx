@@ -51,13 +51,15 @@ export default function Hero() {
             <span className="hero__role-prefix">I build </span>
             <TypeAnimation
               sequence={[
-                'AI/ML Systems with TensorFlow',
+                'Local-LLM Triage Pipelines (Ollama + Pydantic)',
                 2000,
-                'Full-Stack Apps with MERN',
+                'Codebase Knowledge Graphs & AST Engines',
                 2000,
-                'Blockchain DApps with Solidity',
+                'Live REST Backends in FastAPI & Node.js',
                 2000,
-                'Real-Time CV with MediaPipe',
+                'Full-Stack Web Apps with React & Next.js',
+                2000,
+                'Real-Time Edge AI/ML Systems (MediaPipe)',
                 2000,
               ]}
               wrapper="span"
@@ -73,9 +75,10 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.65 }}
           >
-            CS student at JK Lakshmipat University, Jaipur — building at the intersection of
-            AI/ML, full-stack web, and blockchain. Ex-intern at LNMIIT with ~98% accuracy
-            on real-time pose estimation. CodeChef 3★ (1609).
+            Python developer with hands-on GenAI experience building local-LLM (Ollama)
+            triage pipelines with Pydantic-validated structured outputs and 124+ Pytest tests,
+            alongside live REST backends in FastAPI and Node.js. Ex-AI/ML Intern at LUSIP, LNMIIT Jaipur.
+            CodeChef 3★ (1649).
           </motion.p>
 
           <motion.div
@@ -148,16 +151,16 @@ export default function Hero() {
           </div>
           <div className="hero__stats">
             <div className="hero__stat">
-              <strong>3★</strong>
+              <strong>Python & GenAI</strong>
+              <span>Developer</span>
+            </div>
+            <div className="hero__stat">
+              <strong>Full-Stack</strong>
+              <span>FastAPI · Node · React</span>
+            </div>
+            <div className="hero__stat">
+              <strong>3★ (1649)</strong>
               <span>CodeChef</span>
-            </div>
-            <div className="hero__stat">
-              <strong>AI/ML</strong>
-              <span>+ MERN</span>
-            </div>
-            <div className="hero__stat">
-              <strong>MERN</strong>
-              <span>Full Stack Developer</span>
             </div>
           </div>
         </motion.div>

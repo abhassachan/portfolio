@@ -6,7 +6,7 @@ import profilePic from '../assets/abhas.jpg';
 const highlights = [
   { icon: <FiBook />, label: 'University', value: 'JK Lakshmipat University' },
   { icon: <FiMapPin />, label: 'Location', value: 'Jaipur, Rajasthan' },
-  { icon: <FiCode />, label: 'Focus', value: 'AI/ML · MERN · Blockchain' },
+  { icon: <FiCode />, label: 'Focus', value: 'Python & GenAI · Full-Stack · AI/ML' },
   { icon: <FiCoffee />, label: 'Contact', value: 'abhassachan@gmail.com' },
 ];
 
@@ -26,25 +26,26 @@ export default function About() {
 
           <div className="about__right" data-aos="fade-left" data-aos-delay="100">
             <span className="section-label">About Me</span>
-            <h2 className="section-title">Building the Web,<br />One API at a Time</h2>
+            <h2 className="section-title">Python & GenAI Developer,<br />Building Intelligent Pipelines & Scalable Backends</h2>
 
             <p className="about__para">
-              I'm <strong>Abhas Sachan</strong>, a B.Tech Computer Science student at
-              JK Lakshmipat University, Jaipur (CGPA: 7.29). I work at the intersection
-              of AI/ML, full-stack web development, and blockchain — building systems that
-              are intelligent, scalable, and decentralized.
+              I'm <strong>Abhas Sachan</strong>, a Computer Science & Engineering undergraduate at
+              JK Lakshmipat University, Jaipur (CGPA: 7.29), specializing as a <strong>Python & GenAI Developer</strong> alongside
+              full-stack engineering.
             </p>
 
             <p className="about__para">
-              I interned as an <strong>AI/ML Engineer at LUSIP, LNMIIT Jaipur</strong> where
-              I developed a real-time exercise recognition system using deep learning and
-              MediaPipe, achieving ~98% classification accuracy deployed on Raspberry Pi.
+              With hands-on GenAI experience, I built <strong>Ravel</strong> — a local-LLM (Ollama) triage pipeline
+              featuring Pydantic-validated structured outputs, 124+ automated Pytest tests, Tree-Sitter CST parsing, and
+              deterministic NetworkX graph reachability that traces execution paths from HTTP routes to sinks to eliminate noise.
+              I also developed <strong>CONQUR</strong>, a mobile-first GPS-gamified running PWA with real-time Leaflet tracking,
+              clan wars, and scheduled XP challenges, backed by a Node.js/Express and MongoDB REST backend.
             </p>
 
             <p className="about__para">
-              On the blockchain side, I've built a <strong>peer-to-peer solar energy trading
-              platform</strong> using Solidity and Ethereum. I'm also a <strong>CodeChef 3★
-              rated programmer</strong> (peak 1609).
+              Previously, I interned as an <strong>AI/ML Intern at LUSIP, LNMIIT Jaipur</strong>,
+              developing a real-time exercise recognition pipeline with MediaPipe (~98% accuracy deployed
+              on Raspberry Pi). I am also a <strong>CodeChef 3★ rated programmer</strong> (Rating: 1649).
             </p>
 
             <div className="about__highlights">

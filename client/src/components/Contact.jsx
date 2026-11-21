@@ -86,7 +86,7 @@ export default function Contact() {
 
               <div className="contact__availability">
                 <span className="contact__avail-dot" />
-                <span>Available for internship & fresher roles</span>
+                <span>Available for Python & GenAI / Full-Stack roles</span>
               </div>
             </div>
           </div>

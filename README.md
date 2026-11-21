@@ -1,9 +1,9 @@
 # Abhas Sachan — Personal Portfolio
 
-A full-stack personal portfolio website built with the **MERN Stack** (MongoDB, Express.js, React.js, Node.js).
+Portfolio website of **Abhas Sachan** — Python & GenAI Developer | Full-Stack Developer | AI/ML Engineer. Built with React.js, Express.js, and Node.js.
 
- **Live Demo:** https://abhas-sachan.vercel.app/
- **Backend API:** https://abhas-portfolio-backend.onrender.com
+- **Live Demo:** https://abhas-sachan.vercel.app/
+- **Backend API:** https://abhas-portfolio-backend.onrender.com
 
 ---
 
